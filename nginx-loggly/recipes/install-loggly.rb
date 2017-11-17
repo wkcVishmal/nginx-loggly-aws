@@ -23,6 +23,12 @@
 
 include_recipe "rsyslog"
 
+apt_update "update"
+
+apt_package 'python-setuptools' do
+  action :install
+end
+
 # Taken from https://www.loggly.com/docs/configure-syslog-script
 execute "install loggly" do
   command "wget -q -O - https://www.loggly.com/install/configure-syslog.py | sudo python - setup --yes --auth 078dd418-0f5a-4437-a0da-03a6561c9063 --account chamika"

@@ -1,8 +1,10 @@
 DEPENDENCIES
+  apt (~> 6.1.4)
   nginx (= 7.0.1)
   rsyslog (~> 6.0.2)
 
 GRAPH
+  apt (6.1.4)
   build-essential (8.0.3)
     mingw (>= 1.1)
     seven_zip (>= 0.0.0)
