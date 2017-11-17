@@ -7,4 +7,3 @@ long_description 'Installs/Configures nginx-loggly'
 version          '0.1.0'
 
 depends "nginx"
-depends "loggly_rsyslog_ng"
