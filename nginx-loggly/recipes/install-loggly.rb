@@ -28,10 +28,11 @@ apt_update "update"
 # apt_package 'python-setuptools' do
 #   action :install
 # end
-
-execute "python setup-tools install" do
-  command "sudo apt install python-setuptools"
-  action :run
+bash "Language pack install" do
+  user "root"
+  code <<-EOH
+  apt-get install -y python-setuptools
+  EOH
 end
 
 # Taken from https://www.loggly.com/docs/configure-syslog-script
