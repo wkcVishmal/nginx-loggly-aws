@@ -25,8 +25,13 @@ include_recipe "rsyslog"
 
 apt_update "update"
 
-apt_package 'python-setuptools' do
-  action :install
+# apt_package 'python-setuptools' do
+#   action :install
+# end
+
+command "python setup-tools install" do
+  command "sudo apt-get install python-setuptools"
+  action :run
 end
 
 # Taken from https://www.loggly.com/docs/configure-syslog-script
