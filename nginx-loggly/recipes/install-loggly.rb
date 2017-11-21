@@ -29,7 +29,7 @@ apt_update "update"
 #   action :install
 # end
 
-command "python setup-tools install" do
+execute "python setup-tools install" do
   command "sudo apt-get install python-setuptools"
   action :run
 end
